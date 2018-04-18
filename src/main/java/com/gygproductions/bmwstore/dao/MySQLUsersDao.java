@@ -107,8 +107,6 @@ public class MySQLUsersDao implements Users {
         } catch (SQLException e) {
             throw new RuntimeException("Error changing email.", e);
         }
-
-
     }
 
 }

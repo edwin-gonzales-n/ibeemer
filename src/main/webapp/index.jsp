@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div class="bg">
+    <div id="bgimage-main" class="bg">
         <jsp:include page="/WEB-INF/partials/navbar.jsp" />
         <header class="container-fluid">
             <div class="row">
@@ -16,6 +16,18 @@
                     <h1>iBeemer</h1>
                     <h2>The BMW Exchange Community</h2>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="active-cyan-3 active-cyan-4 mb-4">
+                        <form action="/posts">
+                            <input class="form-control search-transparency btn-outline-dark" type="text" placeholder="Search" aria-label="Search" id="search-box-main">
+                            <button style="display: none"></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
             </div>
         </header>
     </div>

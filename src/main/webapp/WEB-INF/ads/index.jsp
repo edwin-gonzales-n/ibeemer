@@ -5,33 +5,35 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
+        <jsp:param name="title" value="Viewing All The Posts" />
     </jsp:include>
 </head>
 <body>
 
-<div class="posts-bg">
+<div class="posts-Transparency">
 <jsp:include page="${navbar}"/>
-<br>
-    <h1>B&B - Beamers and Blogs</h1>
     <br>
-    <div class="container">
+        <h1>B&B - Beamers and Blogs</h1>
+        <br>
+        <div class="container">
             <c:forEach var="ad" items="${ads}">
                 <div class="row container-fluid">
-                    <div class="col-sm" >
-                        <img src="${ad.location}" style="width: 50%; height: 30%; text-align: center" alt="test">
-                        <h3>${ad.title}</h3>
-                        <article class="container-fluid">${ad.description}</article>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10" >
+                        <img src="${ad.location}" style="width: 100%; text-align: center" alt="test">
                         <br>
-                        <p>Categories: ${ad.category}</p>
-                        <p>Price: $${ad.price}</p>
-                        <img src="${ad.location}" style="width: 50%; height: 30%; text-align: center" alt="test">
-                        <a href="/ads/single?ad-id=${ad.id}" class="text-center center-block">View Full Ad</a>
+                        <a href="/ads/single?ad-id=${ad.id}" class="text-center center-block"><h1>${ad.title}</h1></a>
+                        <article class="container-fluid article-justify" style="text-align: justify; width: 100%">${ad.description}</article>
+                        <br>
+                        <p>Categories: ${ad.category} | Created on: ${ad.created_on}</p>
+                        <hr>
+                        <br>
                     </div>
+                    <div class="col-sm-1"></div>
                 </div>
             </c:forEach>
+        </div>
     </div>
-</div>
-<jsp:include page="/WEB-INF/partials/scripts.jsp" />
+    <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 </body>
 </html>

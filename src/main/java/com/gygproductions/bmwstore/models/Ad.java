@@ -5,12 +5,12 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
-    private String price;
+    private String created_on;
     private String location;
     private String category;
 
 
-    public Ad(long id, long userId, String title, String description, String category, String price, String location) {
+    public Ad(long id, long userId, String title, String description, String category, String created_on, String location) {
 
 //    public Ad(long id, long userId, String title, String description, String location) {
 
@@ -19,34 +19,34 @@ public class Ad {
         this.title = title;
         this.description = description;
         this.category = category;
-        this.price = price;
+        this.created_on = created_on;
         this.location = location;
     }
 
-    public Ad(long id, long userId, String title, String description, String price) {
+    public Ad(long id, long userId, String title, String description, String created_on) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.price = price;
+        this.created_on = created_on;
 
 //        this.location = location;
 
     }
 
-    public Ad(long userId, String title, String description, String price, String location) {
+    public Ad(long userId, String title, String description, String created_on, String location) {
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.price = price;
+        this.created_on = created_on;
         this.location = location;
     }
 
-    public Ad(long userId, String title, String description, String price, String category,String location) {
+    public Ad(long userId, String title, String description, String created_on, String category,String location) {
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.price = price;
+        this.created_on = created_on;
         this.category = category;
         this.location = location;
 
@@ -74,12 +74,12 @@ public class Ad {
         this.id = id;
     }
 
-    public String getPrice() {
-        return price;
+    public String getCreated_on() {
+        return created_on;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setCreated_on(String created_on) {
+        this.created_on = created_on;
     }
 
     public long getUserId() {

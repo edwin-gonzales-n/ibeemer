@@ -7,8 +7,7 @@
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar_logout.jsp" />
-
+    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
         <h1 style="text-align: center">Welcome, ${sessionScope.user.username}!</h1>
         <div><button id="edit-profile" class="center-block">Edit Profile</button></div>
