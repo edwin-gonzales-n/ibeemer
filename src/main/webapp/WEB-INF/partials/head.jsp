@@ -8,4 +8,5 @@
 <link rel="stylesheet" href="/resources/css/main.css">
 <link rel="stylesheet" href="/resources/css/fadein.css">
 <link rel="stylesheet" href="/resources/css/registration.css">
+<link rel="stylesheet" href="/resources/css/posts.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

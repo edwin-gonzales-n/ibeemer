@@ -33,17 +33,17 @@ public class MySQLAdsDao implements Ads {
 
 //            stmt = connection.prepareStatement("SELECT * FROM ads JOIN pivot_media on ads.id = pivot_media.ad_id join media on pivot_media.media_id = media.id order by ad_id");
 
-            stmt = connection.prepareStatement("SELECT * FROM ads   " +
-                    "JOIN pivot_categories pc ON ads.id = pc.ads_id   " +
+            stmt = connection.prepareStatement("SELECT * FROM posts   " +
+                    "JOIN pivot_categories pc ON posts.id = pc.posts_id   " +
                     "JOIN categories c ON pc.categories_id = c.id   " +
-                    "join pivot_media  on ads.id = pivot_media.ad_id   " +
+                    "join pivot_media  on posts.id = pivot_media.ad_id   " +
                     "join media     on pivot_media.media_id = media.id  " +
                     "order by ad_id;");
 
             ResultSet rs = stmt.executeQuery();
             return createAdsForMain(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving all ads.", e);
+            throw new RuntimeException("Error retrieving all posts.", e);
         }
     }
 

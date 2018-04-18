@@ -1,0 +1,12 @@
+.posts-bg{
+
+    /* Full height */
+    height: 100%;
+    /* The image used */
+    background-image:
+            url("/resources/img/automobile-bmw-car-47214.jpg");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}

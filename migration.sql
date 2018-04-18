@@ -1,0 +1,53 @@
+CREATE DATABASE IF NOT EXISTS ibeemer_db;
+
+use ibeemer_db;
+
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    username VARCHAR(240) NOT NULL,
+    email VARCHAR(240) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE posts (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id INT UNSIGNED NOT NULL,
+    title VARCHAR(240) NOT NULL,
+    description TEXT NOT NULL,
+    created_on DATETIME NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE categories(
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  category_name VARCHAR (250) not null,
+  PRIMARY KEY (id)
+);
+
+CREATE table pivot_categories (
+  posts_id int unsigned not null,
+  categories_id int unsigned not null,
+  foreign key (categories_id) references categories(id),
+  foreign key (posts_id) references posts(id) on delete cascade
+);
+
+CREATE TABLE media (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  location varchar(250),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE pivot_media(
+  media_id int unsigned not null,
+  post_id int unsigned not null,
+  foreign key (media_id) references media(id) on delete cascade,
+  foreign key (post_id) references posts(id) on delete cascade
+);
+
+
