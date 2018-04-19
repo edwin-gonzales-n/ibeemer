@@ -8,8 +8,8 @@
 </head>
 <body>
 
-    <div id="bgimage-main" class="bg">
-        <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <div id="bgimage-main" class="bg container-fluid">
+        <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
         <header class="container-fluid">
             <div class="row">
                 <div id="test" class="col-sm-12 main-title">
@@ -21,8 +21,8 @@
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
                     <div class="active-cyan-3 active-cyan-4 mb-4">
-                        <form action="/posts">
-                            <input class="form-control search-transparency btn-outline-dark" type="text" placeholder="Search" aria-label="Search" id="search-box-main">
+                        <form action="/postsearch" method="get">
+                            <input class="form-control search-transparency btn-outline-dark" type="text" placeholder="Search" id="search-box-main" name="search">
                             <button style="display: none"></button>
                         </form>
                     </div>

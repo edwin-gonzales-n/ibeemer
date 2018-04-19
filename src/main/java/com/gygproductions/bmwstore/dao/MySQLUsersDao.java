@@ -109,4 +109,18 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    public String resetPassword(String password, String email) {
+        String query = "UPDATE users SET password = ? WHERE email = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, hashPassword(password));
+            stmt.setString(2, email);
+            stmt.executeUpdate();
+            return String.format("Password reset was successful for %s. Please login " +
+                    "again with your new password.", email);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating password.", e);
+        }
+    }
+
 }

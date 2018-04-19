@@ -9,7 +9,7 @@
 <html>
 <head></head>
 <body>
-<form action="upload" method="post" enctype="multipart/form-data">
+<form action="/upload" method="post" enctype="multipart/form-data">
     Please enter file name:<input type="text" name="fileName">
     Select File to Upload:<input type="file" name="picture">
     <br>

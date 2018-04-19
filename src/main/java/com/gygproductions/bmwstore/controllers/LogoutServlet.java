@@ -16,6 +16,6 @@ public class LogoutServlet extends HttpServlet {
         request.removeAttribute("username_error");
         request.removeAttribute("password_mismatch");
         request.getSession().invalidate();
-        response.sendRedirect("/login");
+        response.sendRedirect("/");
     }
 }

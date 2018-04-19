@@ -9,4 +9,5 @@ public interface Users {
     String hashPassword(String password);
     void modifyEmail(String email, String user);
     void modifyPassword(String password, String user);
+    String resetPassword(String password, String email);
 }

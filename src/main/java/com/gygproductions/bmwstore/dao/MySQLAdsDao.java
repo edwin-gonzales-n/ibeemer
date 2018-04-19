@@ -14,11 +14,7 @@ public class MySQLAdsDao implements Ads {
     public MySQLAdsDao(Config config) {
         try {
             DriverManager.registerDriver(new Driver());
-            connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
-            );
+            connection = DriverManager.getConnection(config.getUrl(), config.getUser(), config.getPassword());
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }
@@ -28,18 +24,7 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement(
-                    "SELECT * " +
-                            "FROM posts " +
-                            "JOIN pivot_categories pc " +
-                            "ON posts.id = pc.posts_id " +
-                            "JOIN categories c " +
-                            "ON pc.categories_id = c.id " +
-                            "JOIN pivot_media " +
-                            "ON posts.id = pivot_media.post_id " +
-                            "JOIN media " +
-                            "ON pivot_media.media_id = media.id " +
-                            "ORDER BY post_id;");
+            stmt = connection.prepareStatement("SELECT * " + "FROM posts " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "ORDER BY post_id;");
 
             ResultSet rs = stmt.executeQuery();
             return createAdsForMain(rs);
@@ -49,27 +34,11 @@ public class MySQLAdsDao implements Ads {
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
-        return new Ad(
-                rs.getLong("id"),
-                rs.getLong("user_id"),
-                rs.getString("title"),
-                rs.getString("description"),
-                rs.getString("category"),
-                rs.getString("created_on"),
-                rs.getString("location")
-        );
+        return new Ad(rs.getLong("id"), rs.getLong("user_id"), rs.getString("title"), rs.getString("description"), rs.getString("category"), rs.getString("created_on"), rs.getString("location"));
     }
 
     private Ad extractAdsforMain(ResultSet rs) throws SQLException {
-        return new Ad(
-                rs.getLong("id"),
-                rs.getLong("user_id"),
-                rs.getString("title"),
-                rs.getString("description"),
-                rs.getString("category_name"),
-                rs.getString("created_on"),
-                rs.getString("location")
-        );
+        return new Ad(rs.getLong("id"), rs.getLong("user_id"), rs.getString("title"), rs.getString("description"), rs.getString("category_name"), rs.getString("created_on"), rs.getString("location"));
     }
 
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
@@ -97,50 +66,44 @@ public class MySQLAdsDao implements Ads {
             System.out.println("rs.getLong(1) = " + rs.getLong(1));
             System.out.println("rs.getString(1) = " + rs.getString(1));
 
-            insertMedia(ad.getLocation(),rs.getInt(1));
-            insertCat(rs.getInt(1),holder);
-
+            insertMedia(ad.getLocation(), rs.getInt(1));
+            insertCat(rs.getInt(1), holder);
             return rs.getLong(1);
+
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new post.", e);
         }
     }
 
-    private void insertCat (int rs, Long cat) {
+    private void insertCat(int rs, Long cat) {
         try {
-            String insertQuery = "" +
-                    "INSERT INTO " +
-                    "pivot_categories (ads_id, categories_id) " +
-                    "VALUES (?,?)";
+            String insertQuery = "" + "INSERT INTO " + "pivot_categories (posts_id, categories_id) " + "VALUES (?,?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
-            stmt.setInt(1,rs);
+            stmt.setInt(1, rs);
             stmt.setLong(2, cat);
             stmt.executeUpdate();
             ResultSet pr = stmt.getGeneratedKeys();
             pr.next();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException("Error adding category", e);
         }
     }
 
-    private void insertMedia (String location, int rs) {
-        try{
-            String insertQuery = "" +
-                    "INSERT INTO media (location) VALUES (?)";
+    private void insertMedia(String location, int rs) {
+        try {
+            String insertQuery = "" + "INSERT INTO media (location) VALUES (?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
-            stmt.setString(1,location);
+            stmt.setString(1, location);
             stmt.executeUpdate();
             ResultSet resultSet = stmt.getGeneratedKeys();
             resultSet.next();
             int media_id = resultSet.getInt(1);
-            insertQuery = "" +
-                    "INSERT INTO pivot_media(media_id, ad_id) " +
-                    "VALUES (?,?)";
+            insertQuery = "" + "INSERT INTO pivot_media(media_id, post_id) " + "VALUES (?,?)";
             stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
-            stmt.setInt(1,media_id);
-            stmt.setInt(2,rs);
+            stmt.setInt(1, media_id);
+            stmt.setInt(2, rs);
             stmt.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException("Error adding file location", e);
         }
     }
@@ -149,20 +112,7 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> profileAds(String s) {
         PreparedStatement stmt;
         try {
-            stmt = connection.prepareStatement("" +
-                    "SELECT * " +
-                    "FROM posts " +
-                    "JOIN users " +
-                    "ON posts.user_id = users.id " +
-                    "JOIN pivot_categories pc " +
-                    "ON posts.id = pc.posts_id " +
-                    "JOIN categories c " +
-                    "ON pc.categories_id = c.id " +
-                    "join pivot_media " +
-                    "on posts.id = pivot_media.post_id " +
-                    "join media " +
-                    "on pivot_media.media_id = media.id " +
-                    "where username=?");
+            stmt = connection.prepareStatement("" + "SELECT * " + "FROM posts " + "JOIN users " + "ON posts.user_id = users.id " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "WHERE username=?");
 
             stmt.setString(1, s);
             ResultSet rs = stmt.executeQuery();
@@ -188,29 +138,14 @@ public class MySQLAdsDao implements Ads {
         PreparedStatement pst = null;
         try {
 
-            pst = connection.prepareStatement("" +
-                    "SELECT * " +
-                    "FROM posts " +
-                    "JOIN users " +
-                    "ON posts.user_id = users.id " +
-                    "JOIN pivot_categories pc " +
-                    "ON posts.id = pc.posts_id " +
-                    "JOIN categories c " +
-                    "ON pc.categories_id = c.id " +
-                    "join pivot_media " +
-                    "on posts.id = pivot_media.post_id " +
-                    "join media " +
-                    "on pivot_media.media_id = media.id " +
-                    "WHERE posts.title " +
-                    "LIKE  ?  " +
-                    "AND c.category_name = ?");
+            pst = connection.prepareStatement("" + "SELECT * " + "FROM posts " + "JOIN users " + "ON posts.user_id = users.id " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "WHERE posts.title " + "LIKE  ?  " + "AND c.category_name = ?");
 
-            pst.setString(1,"%" + searchInput + "%");
+            pst.setString(1, "%" + searchInput + "%");
             pst.setString(2, searchCat);
             ResultSet rs = pst.executeQuery();
             return createAdsForMain(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving matching ads.", e);
+            throw new RuntimeException("Error retrieving matching posts.", e);
         }
     }
 
@@ -219,18 +154,7 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> individualAd(String adID) {
         PreparedStatement pst = null;
         try {
-            pst = connection.prepareStatement("" +
-                    "SELECT * " +
-                    "FROM posts " +
-                    "JOIN pivot_categories pc " +
-                    "ON posts.id = pc.posts_id " +
-                    "JOIN categories c " +
-                    "ON pc.categories_id = c.id " +
-                    "join pivot_media " +
-                    "on posts.id = pivot_media.post_id " +
-                    "join media " +
-                    "on pivot_media.media_id = media.id " +
-                    "where posts.id=?");
+            pst = connection.prepareStatement("" + "SELECT * " + "FROM posts " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "WHERE posts.id=?");
 
             pst.setString(1, adID);
             ResultSet rs = pst.executeQuery();
@@ -242,10 +166,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void titleChange(String title, String adId) {
-        String query = "" +
-                "UPDATE posts " +
-                "SET title = ? " +
-                "WHERE id = ?";
+        String query = "" + "UPDATE posts " + "SET title = ? " + "WHERE id = ?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -260,10 +181,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void descriptionChange(String description, String adId) {
-        String query = "" +
-                "UPDATE posts " +
-                "SET description = ? " +
-                "WHERE id = ?";
+        String query = "" + "UPDATE posts " + "SET description = ? " + "WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, description);
@@ -276,8 +194,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void deleteAd(String adId) {
-        String query = "" +
-                "DELETE FROM posts WHERE id = ?";
+        String query = "" + "DELETE FROM posts WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, adId);
@@ -288,6 +205,21 @@ public class MySQLAdsDao implements Ads {
             System.out.println("SQLState: " + e.getSQLState());
             System.out.println("VendorError: " + e.getErrorCode());
             throw new RuntimeException("Error deleting ad");
+        }
+    }
+
+    @Override
+    public List<Ad> searchPosts(String searchInput) {
+        PreparedStatement pst = null;
+        try {
+            pst = connection.prepareStatement("" + "SELECT * " + "FROM posts " + "JOIN users " + "ON posts.user_id = users.id " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "WHERE posts.title " + "LIKE  ?  " + " or c.category_name = ?");
+
+            pst.setString(1, "%" + searchInput + "%");
+            pst.setString(2, "%" + searchInput + "%");
+            ResultSet rs = pst.executeQuery();
+            return createAdsForMain(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new post.", e);
         }
     }
 }

@@ -9,8 +9,7 @@
 
     if(user != null){
         request.setAttribute("navbar",
-                "<li><a class=\"navbar-brand\" href=\"/ads/search\">Search</a></li>\n" +
-                "<li><a class=\"navbar-brand\" href=\"/ads/create\">Create</a></li>\n" +
+                "<li><a class=\"navbar-brand\" href=\"/post/create\">Create</a></li>\n" +
                 "<li><a class=\"navbar-brand\" href=\"/profile\">Profile</a></li>" +
                 "<li><a class=\"navbar-brand\" href=\"/logout\">Logout</a></li>\n");
     }  else {
@@ -20,7 +19,7 @@
     }
 %>
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light container-fluid">
         <a class="navbar-brand" href="/">Home</a>
         <a class="navbar-brand" href="/posts">Members' Posts</a>
         <ul class="nav navbar-nav navbar-right">

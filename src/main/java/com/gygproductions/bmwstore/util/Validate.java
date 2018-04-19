@@ -74,7 +74,7 @@ public class Validate {
 
     }
 
-    public boolean authenticate(String title, String description, String price, HttpServletRequest request) {
+    public boolean authenticate(String title, String description, String upload, HttpServletRequest request) {
         HttpSession session = request.getSession();
 
         if(title == null || title.trim() == ""){
@@ -85,9 +85,9 @@ public class Validate {
             clearAttributes(request);
             session.setAttribute("description_error",  "<p style=\"color:red\">Description cannot be empty</p>");
             return false;
-        } else if(price == null || price.trim() == ""){
+        } else if(upload == null || upload.trim() == ""){
             clearAttributes(request);
-            session.setAttribute("price_error",  "<p style=\"color:red\">Price cannot be empty</p>");
+            session.setAttribute("upload_error",  "<p style=\"color:red\">Image cannot be empty</p>");
             return false;
         } else return true;
     }

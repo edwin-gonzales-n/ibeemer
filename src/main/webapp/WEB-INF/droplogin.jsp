@@ -13,18 +13,20 @@
         <ul class="dropdown-menu dropdown-menu-right mt-2 loginTransparency">
             <li class="px-3 py-2">
                 <form class="form" role="form" action="/login" method="post">
+                    ${username_error}
                     <div class="form-group">
                         <input id="emailInput" placeholder="Username" class="form-control form-control-sm" type="text" required="" name="username">
                     </div>
+                    ${password_error}
                     <div class="form-group">
-                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="" name="password">
+                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="password" required="" name="password">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
                     </div>
                         <div class="form-group text-center">
                             <%--removed from a tag this : data-toggle="modal" data-target="#modalPassword" --%>
-                        <small><a id="forgot-password" href="/register" target="_blank">Forgot password?</a></small>
+                        <small><a id="forgot-password" href="/resetpassword">Forgot password?</a></small>
                     </div>
                 </form>
             </li>

@@ -8,6 +8,7 @@ public class Ad {
     private String created_on;
     private String location;
     private String category;
+    private String upload;
 
 
     public Ad(long id, long userId, String title, String description, String category, String created_on, String location) {
@@ -34,11 +35,11 @@ public class Ad {
 
     }
 
-    public Ad(long userId, String title, String description, String created_on, String location) {
+    public Ad(long userId, String title, String description, String category, String location) {
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.created_on = created_on;
+        this.category = category;
         this.location = location;
     }
 
@@ -49,8 +50,16 @@ public class Ad {
         this.created_on = created_on;
         this.category = category;
         this.location = location;
-
     }
+
+//    public Ad(long userId, String title, String description, String upload, String category) {
+//        this.userId = userId;
+//        this.title = title;
+//        this.description = description;
+//        this.upload = upload;
+//        this.category = category;
+//    }
+
 
     public String getLocation() {
         return location;
@@ -108,5 +117,13 @@ public class Ad {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getUpload() {
+        return upload;
+    }
+
+    public void setUpload(String upload) {
+        this.upload = upload;
     }
 }

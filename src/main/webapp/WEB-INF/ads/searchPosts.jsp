@@ -5,15 +5,14 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All The Posts" />
+        <jsp:param name="title" value="View Searched Posts" />
     </jsp:include>
 </head>
 <body>
-
-<div>
 <jsp:include page="${navbar}"/>
+<div>
     <br>
-        <h1>B&B - Beamers and Blogs</h1>
+        <h1>Your search</h1>
         <br>
         <div class="container">
             <c:forEach var="ad" items="${ads}">
