@@ -5,38 +5,47 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
+    <link rel="stylesheet" href="/resources/css/profile.css">
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<div class="bgProlife container-fluid div_backgrndimg">
+    <img class="blur" src="/resources/img/automobile-bmw-car-707046.jpg" alt="">
+    
+    <div class="foreground container-fluid">
+        <div class="ProfileTransparency container-fluid">
 
-        <h1 style="text-align: center">Welcome, ${sessionScope.user.username}!</h1>
-        <div><button id="edit-profile" class="center-block">Edit Profile</button></div>
-    <hr>
-        <form id="edit-form" action="/profile" method="post" class="hidden center-block text-center">
-            <h3>Email: ${sessionScope.user.email}</h3>
-            <label for="emailInput"><input type="text" name="emailInput" id="emailInput" placeholder="update email"></label>
-            <h3>Update Password</h3>
-            <label for="passwordInput"><input type="text" name="passwordInput" id="passwordInput" placeholder="update password"></label><br>
+            <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-            <button id="edit-changes" type="submit" class="btn btn-primary">Edit</button>
-        </form>
+            <h1 style="text-align: center">Welcome ${sessionScope.user.username}!</h1>
+            <hr>
+            <h1>My Posts</h1><br>
 
-    <div class="container">
-        <div class="row">
-            <c:forEach var="ad" items="${profileAds}">
-                <div class="col-md-6">
-                    <h2>${ad.title}</h2>
-                    <p>${ad.description}</p>
-                    <img src="${ad.location}" style="width: 40%;" alt="test">
-                    <h2>${message}</h2>
-                    <a href="/ads/editAd?ad-id=${ad.id}">Edit this ad.</a>
+            <div class="container-fluid">
+                <div class="row">
+                    <c:forEach var="ad" items="${profileAds}">
+                        <div class="col-md-6">
+                            <h2>${ad.title}</h2>
+                            <p>${ad.description}</p>
+                            <img src="${ad.location}" style="width: 40%;" alt="test">
+                            <h2>${message}</h2>
+                            <%--<a class="button" href="/ads/editAd?ad-id=${ad.id}">Edit</a>--%>
+                            <input type="button" class="btn btn-primary" onclick="location.href='/ads/editAd?ad-id=${ad.id}';" value="Edit" />
+                            <br>
+                            <hr>
+                        </div>
+                    </c:forEach>
                 </div>
-            </c:forEach>
+
+            </div>
         </div>
+
     </div>
 
-        <jsp:include page="/WEB-INF/partials/scripts.jsp" />
-    <script src="/js/profile.js"></script>
+</div>
+
+
+<jsp:include page="/WEB-INF/partials/scripts.jsp" />
+<script src="/js/profile.js"></script>
 
 </body>
 </html>

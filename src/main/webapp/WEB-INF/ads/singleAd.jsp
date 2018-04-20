@@ -27,7 +27,7 @@
                     <img src="${ad.location}" alt="test" style="text-align: justify; width: 100%">
                     <br><br>
                     <p class="description" style="text-align: justify; width: 100%">${ad.description}</p>
-                    <h5 class="price">Created on: ${ad.created_on}</h5>
+                    <h5 class="price">Posted by ${ad.username}   |  Created on: ${ad.created_on}</h5>
                 </div>
             <div class="col-sm-1"></div>
         </c:forEach>

@@ -9,12 +9,9 @@ public class Ad {
     private String location;
     private String category;
     private String upload;
+    private String username;
 
-
-    public Ad(long id, long userId, String title, String description, String category, String created_on, String location) {
-
-//    public Ad(long id, long userId, String title, String description, String location) {
-
+    public Ad(long id, long userId, String title, String description, String category, String created_on, String location, String username) {
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -22,7 +19,8 @@ public class Ad {
         this.category = category;
         this.created_on = created_on;
         this.location = location;
-    }
+        this.username = username;
+    } // for extractAdsForMain object  -->  See MySQLAdsDao
 
     public Ad(long id, long userId, String title, String description, String created_on) {
         this.id = id;
@@ -30,9 +28,6 @@ public class Ad {
         this.title = title;
         this.description = description;
         this.created_on = created_on;
-
-//        this.location = location;
-
     }
 
     public Ad(long userId, String title, String description, String category, String location) {
@@ -52,13 +47,23 @@ public class Ad {
         this.location = location;
     }
 
-//    public Ad(long userId, String title, String description, String upload, String category) {
+//    public Ad(long userId, String title, String description, String created_on, String category,String location, String username) {
 //        this.userId = userId;
 //        this.title = title;
 //        this.description = description;
-//        this.upload = upload;
+//        this.created_on = created_on;
 //        this.category = category;
+//        this.location = location;
+//        this.username = username;
 //    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
 
     public String getLocation() {

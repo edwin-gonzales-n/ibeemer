@@ -20,12 +20,12 @@
                 <div class="row container-fluid">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10" >
-                        <img src="${ad.location}" style="width: 100%; text-align: center" alt="test">
+                        <img src="${ad.location}" style="width: 80%; text-align: center" alt="test">
                         <br>
                         <a href="/ads/single?ad-id=${ad.id}" class="text-center center-block"><h1>${ad.title}</h1></a>
                         <article class="container-fluid article-justify" style="text-align: justify; width: 100%">${ad.description}</article>
                         <br>
-                        <p>Categories: ${ad.category} | Created on: ${ad.created_on}</p>
+                        <p>Categories: ${ad.category}  |  Posted by ${ad.username}  |  Created on: ${ad.created_on}</p>
                         <hr>
                         <br>
                     </div>

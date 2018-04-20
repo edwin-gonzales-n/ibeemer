@@ -37,7 +37,7 @@
     <section class="container-fluid">
         <div class="row">
             <div class="col-sm-4 container-fluid paddingLeft">
-                <img src="/resources/img/AdobeStock_182448719.jpg" alt="" style="width: 100%">
+                <img onclick="location.href='/register';" src="/resources/img/AdobeStock_182448719.jpg" alt="" style="width: 100%">
             </div>
 
             <div class="col-sm-4 container-fluid paddingMiddle">
@@ -62,7 +62,7 @@
             </div>
 
             <div class="col-sm-4 container-fluid paddingRight">
-                <img src="/resources/img/AdobeStock_17555962.jpg" alt="" style="width: 100%">
+                <img onclick="location.href='/register';"  src="/resources/img/AdobeStock_17555962.jpg" alt="" style="width: 100%">
             </div>
         </div>
     </section>

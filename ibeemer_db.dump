@@ -1,0 +1,184 @@
+-- MySQL dump 10.13  Distrib 5.7.21, for macos10.13 (x86_64)
+--
+-- Host: localhost    Database: ibeemer_db
+-- ------------------------------------------------------
+-- Server version	5.7.21
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categories` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `category_name` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categories`
+--
+
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (1,'X1'),(2,'X3'),(3,'X5'),(4,'M3'),(5,'M5'),(6,'M8'),(7,'Classics'),(8,'For Sale');
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `media`
+--
+
+DROP TABLE IF EXISTS `media`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `media` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `location` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `media`
+--
+
+LOCK TABLES `media` WRITE;
+/*!40000 ALTER TABLE `media` DISABLE KEYS */;
+INSERT INTO `media` VALUES (1,'/resources/img/automobile-bmw-z4-car-93617.jpg'),(2,'/resources/img/AdobeStock_182210728.jpeg'),(3,'/resources/img/automotive-bmw-car-113176.jpg'),(12,NULL),(13,NULL),(14,NULL),(15,NULL),(16,NULL),(17,NULL),(18,' https://cdn.filestackcontent.com/yJYTLsMRUyFmuYE7BLqQ'),(19,' https://cdn.filestackcontent.com/JbSl9AwkS1qCm5o4SQ3m'),(20,' https://cdn.filestackcontent.com/2hHy6mSTceeetjpr0Xhx'),(21,' https://cdn.filestackcontent.com/nS9noZc0SfO19gcONfLX'),(22,' https://cdn.filestackcontent.com/jHdEo2o5TdebyfQ2oBo8'),(23,' https://cdn.filestackcontent.com/JQtIm2wpT32AwrjTonaH'),(24,' https://cdn.filestackcontent.com/Lw9WjBUfTBGKI1WtxJEC'),(25,' https://cdn.filestackcontent.com/FC1LLZgkSCoksKn2NjDw'),(26,' https://cdn.filestackcontent.com/LDZ2flkYQaS8r8zF95hu');
+/*!40000 ALTER TABLE `media` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pivot_categories`
+--
+
+DROP TABLE IF EXISTS `pivot_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pivot_categories` (
+  `posts_id` int(10) unsigned NOT NULL,
+  `categories_id` int(10) unsigned NOT NULL,
+  KEY `categories_id` (`categories_id`),
+  KEY `posts_id` (`posts_id`),
+  CONSTRAINT `pivot_categories_ibfk_1` FOREIGN KEY (`categories_id`) REFERENCES `categories` (`id`),
+  CONSTRAINT `pivot_categories_ibfk_2` FOREIGN KEY (`posts_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pivot_categories`
+--
+
+LOCK TABLES `pivot_categories` WRITE;
+/*!40000 ALTER TABLE `pivot_categories` DISABLE KEYS */;
+INSERT INTO `pivot_categories` VALUES (1,5),(2,5),(3,5),(19,5),(20,5),(21,3),(22,4),(23,4),(24,7),(25,3),(26,4);
+/*!40000 ALTER TABLE `pivot_categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pivot_media`
+--
+
+DROP TABLE IF EXISTS `pivot_media`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pivot_media` (
+  `media_id` int(10) unsigned NOT NULL,
+  `post_id` int(10) unsigned NOT NULL,
+  KEY `media_id` (`media_id`),
+  KEY `post_id` (`post_id`),
+  CONSTRAINT `pivot_media_ibfk_1` FOREIGN KEY (`media_id`) REFERENCES `media` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `pivot_media_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pivot_media`
+--
+
+LOCK TABLES `pivot_media` WRITE;
+/*!40000 ALTER TABLE `pivot_media` DISABLE KEYS */;
+INSERT INTO `pivot_media` VALUES (1,1),(2,2),(3,3),(12,12),(19,19),(20,20),(21,21),(22,22),(23,23),(24,24),(25,25),(26,26);
+/*!40000 ALTER TABLE `pivot_media` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `posts`
+--
+
+DROP TABLE IF EXISTS `posts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `posts` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL,
+  `title` varchar(240) NOT NULL,
+  `description` text NOT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `posts`
+--
+
+LOCK TABLES `posts` WRITE;
+/*!40000 ALTER TABLE `posts` DISABLE KEYS */;
+INSERT INTO `posts` VALUES (1,1,'BMW M2 Competition: Interview with the BMW M Boss','\n   The introduction of the brand new BMW M2 Competition marked the opportunity for me to sit down with BMW Boss, Frank Van Meel, to discuss the future of the brand that has pioneered concepts that guarantee pure driving pleasure, encompasses an history of motorsport and sheer driving passion every single day – on the road or on the track.\n\n   A few days ago at an undisclosed location near Munich, Frank ran me through the highlights of the M2 Competition during an exclusive first look at the vehicle. The M2C is the replacement to the current M2, which has been with us for the last two years. The highly successful and best-selling M-car has proved that the market was desperately looking for a M-car positioned at a lower price point.\n      ','2018-04-18 02:59:51'),(2,1,'WORLD PREMIERE: BMW M2 Competition — Potential Future Classic?','\n  When the BMW M2 first debuted, it was seen as a sign of BMW returning to greatness. The M2 represented the best qualities of what BMW used to be, the BMW enthusiasts once knew and missed dearly. It was smaller than the M3 and M4, moderately powerful and focused more on handling feel, rather than performance figures or lap times. It was a car that gave enthusiasts hope, hope that BMW was again moving in the right direction. The BMW M2 was thought of as the modern-day E46 M3, which is largely considered to be the best M3 of all time. So, naturally, almost as soon as it debuted, fans were already thinking ahead. They wanted a lighter, sharper, faster version, akin to the legendary E46 BMW M3 CSL. And now they may have gotten just that, with the brand-new BMW M2 Competition.\n  ','2018-04-18 02:59:51'),(3,1,'BMW CCA membership gets a major update','\n           The BMW CCA announced a major update to the Membership Reward Rebate Program this week. Individuals who purchase a club membership of three or more years will now immediately qualify for the Membership Reward Rebate Program and may be eligible to receive a rebate of up to $1,500. This means you can now skip the old waiting period of 365 days and immediately apply for a rebate with this new option.\n\n   A three-year club membership can be purchased for only $134 at bmwcca.org or by calling the club office at 864-250-0022.\n                                ','2018-04-18 02:59:51'),(4,3,'test','test','2018-04-19 00:45:22'),(5,3,'test','test','2018-04-19 00:49:12'),(6,3,'tes','test','2018-04-19 01:09:51'),(7,2,'test','test','2018-04-19 01:33:46'),(8,2,'test','test','2018-04-19 01:35:01'),(9,2,'tes','test','2018-04-19 01:53:54'),(10,2,'test','test','2018-04-19 02:36:04'),(11,2,'test','test','2018-04-19 12:04:59'),(12,3,'test','test','2018-04-19 12:08:50'),(19,2,'This is my first post on this site!','Thank you all for the wonderful words about my first vist.  I had a blast!!  Now i want to invite you to this event we are hosting.  A bunch of us from the BMW family will be there.   Hope to see you!   Gonzo.','2018-04-19 12:45:06'),(20,2,'This is a picture upload test to show big ole sarge','This is a picture upload test to show big ole sarge.  This is Sarge\'s next vehicle after working for Oracle.','2018-04-19 12:47:09'),(21,2,'creating a post for Ryan','creating a post for Ryan','2018-04-19 12:54:22'),(22,2,'Create a post for my boy Rodger from the Bronx','Creating a post for the man!!','2018-04-19 13:32:56'),(23,2,'This is Fernando\'s new car','This is Fer\'s new car because he is the man!','2018-04-19 15:45:52'),(24,2,'This is for my boy Cooper the man!','This is for my boy Cooper the man!   Thank you hommie, you ma boy blue!','2018-04-19 16:41:04'),(25,2,'This is a post to show functionality','This is a post to show functionality.  April 19th, at Codeup.','2018-04-19 16:44:40'),(26,2,'This is for the guys!','Testing at codeup!','2018-04-19 16:53:02');
+/*!40000 ALTER TABLE `posts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(240) NOT NULL,
+  `email` varchar(240) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'username1','benji@gmail.com','$2a$12$5p8EwpSLV9yQId9.mFE5X.TZ7Sd/DTIv1WlFwos0x30jSB1M3TRj2'),(2,'gonzo','gonzo@djgonzo.com','$2a$12$JyTD.7ScFe3LgxKEOqeE0eZ1vBzAbdZQ1JdHOdHtqjRSS27yCE5de'),(3,'admin','admin@gmail.com','$2a$12$dQlge.jKcWrr7.3GnvkHd.64ifQ2nbT5SrFjIaXkl1O2GMCaSjZga');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-04-19 19:49:09

@@ -77,3 +77,16 @@ footer {
 }
 
 /* Styling for fade-in home title*/
+
+@media(max-width: 544px) {
+    .navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    .navbar .navbar-nav {
+        float:none !important;
+    }
+    .navbar .collapse.in, .navbar .collapsing  {
+        clear:both;
+    }
+}

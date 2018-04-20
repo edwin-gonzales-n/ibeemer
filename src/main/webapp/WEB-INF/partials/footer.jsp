@@ -82,16 +82,16 @@
                 </h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a href="#!">Trip To Munich</a>
+                    <a href="https://fcbayern.com/us/fans/paulaner-fantraume-2018/paulaner-fantraume-2018-us">Trip To Munich</a>
                 </p>
                 <p>
-                    <a href="#!">Test Drive an M5</a>
+                    <a href="https://www.bmwusa.com/vehicles/m-models/m5.html?&origin=bmw_search_brand_google_tier1_national&gclid=Cj0KCQjw_ODWBRCTARIsAE2_EvUgixU-Sjm1hK2UQE4PSQqPKptVKewu3kkKtvI5cN-4UfNpsbqJHVQaAlk3EALw_wcB">Test Drive an M5</a>
                 </p>
                 <p>
-                    <a href="#!">BBQ at the River</a>
+                    <a href="http://riverwalkguide.com/category/dining/bar-b-q/">BBQ at the River</a>
                 </p>
                 <p>
-                    <a href="#!">Oracle showcase</a>
+                    <a href="https://cloud.oracle.com/home">Oracle showcase</a>
                 </p>
             </div>
             <!--/.Second column-->
@@ -103,16 +103,16 @@
                 </h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a href="#!">Your Account</a>
+                    <a href="/">Your Account</a>
                 </p>
                 <p>
-                    <a href="#!">Become an member</a>
+                    <a href="/register">Become an member</a>
                 </p>
                 <p>
-                    <a href="#!">Post</a>
+                    <a href="/">Post</a>
                 </p>
                 <p>
-                    <a href="#!">Help</a>
+                    <a href="/">Help</a>
                 </p>
             </div>
             <!--/.Third column-->
@@ -138,12 +138,20 @@
     </div>
     <!--/.Footer Links-->
 
+    <div>
+        <a href="https://cloud.oracle.com/acc">
+            <strong> Powered by the Oracle Cloud Application Container</strong>
+        </a>
+    </div>
+
     <!-- Copyright-->
     <div class="footer-copyright py-3 text-center">
         © 2018 Copyright:
-        <a href="https://mdbootstrap.com/material-design-for-bootstrap/">
+        <a href="/">
             <strong> ibeemer.com</strong>
         </a>
+
+
     </div>
     <!--/.Copyright -->
 

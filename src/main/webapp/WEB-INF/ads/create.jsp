@@ -5,54 +5,72 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+    <link rel="stylesheet" href="/resources/css/profile.css">
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container-fluid">
-        <h1>Create a new Ad</h1>
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
-                <form action="/post/create" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        ${title_error}
-                        <label for="title">Title</label>
-                        <input id="title" name="title" class="form-control" type="text" value=${title}>
-                    </div>
-                    <div class="form-group">
-                        ${description_error}
-                        <label for="description">Description</label>
-                        <textarea id="description" name="description" class="form-control" type="text">${description}</textarea>
-                    </div>
-                    <div class="form-group">
-                        <button onclick="openPicker()" type="button" class="btn btn-link btn-secondary">Upload Image</button>
-                    </div>
-                    <div id="picUrl">
+        <img class="blur" src="/resources/img/automobile-bmw-car-707046.jpg" alt="">
+        <div class="foreground">
+            <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <form class="form-horizontal" action="/post/create" method="post">
+                        <fieldset class="registration-Transparency container-fluid">
+                            <div id="legend">
+                                <legend style="font-size: 2.5em">Create New Post</legend>
+                            </div>
 
-                    </div>
-                    <%--image goes here--%>
-                    <div id="posts" class="container">
-                    </div>
-                    <br><br>
-                    <select id="newAdCat" name="category" class="custom-select btn-secondary">
-                        <option selected>Categories</option>
-                        <option value="1">X1</option>
-                        <option value="2">X3</option>
-                        <option value="3">X5</option>
-                        <option value="4">M3</option>
-                        <option value="5">M5</option>
-                        <option value="6">M8</option>
-                        <option value="7">Classics</option>
-                        <option value="8">For Sale</option>
-                    </select>
-                    <br>
-                    <br>
-                    <input type="submit" class="btn btn-link btn-secondary">
-                </form>
+                            <div class="control-group container-fluid">
+                                ${title_error}
+                                <label class="control-label" for="title">Title</label>
+                                <div class="controls">
+                                    <input id="title" name="title" class="form-control container-fluid" type="text" value=${title}>
+                                </div>
+                            </div>
 
+                            <div class="control-group container-fluid">
+                                ${description_error}
+                                <label class="control-label" for="description">Description</label>
+                                <div>
+                                    <textarea id="description" name="description" class="form-control container-fluid" type="text">${description}</textarea>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <button onclick="openPicker()" type="button" class="btn btn-link btn-secondary">Upload Image</button>
+                                </div>
+                            </div>
+                            <div id="picUrl">
+
+                            </div>
+                            <%--image goes here--%>
+                            <div id="posts" class="container-fluid">
+                            </div>
+                            <br>
+                            <select id="newAdCat" name="category" class="custom-select btn-secondary" style="text-align: center; width: 50%">
+                                <option selected>Categories</option>
+                                <option value="1">X1</option>
+                                <option value="2">X3</option>
+                                <option value="3">X5</option>
+                                <option value="4">M3</option>
+                                <option value="5">M5</option>
+                                <option value="6">M8</option>
+                                <option value="7">Classics</option>
+                                <option value="8">For Sale</option>
+                            </select>
+                            <br>
+                            <br>
+                            <input type="submit" class="btn btn-link btn-secondary">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-sm-3"></div>
             </div>
-            <div class="col-sm-3"></div>
         </div>
+
     </div>
 <jsp:include page="/WEB-INF/partials/scripts.jsp" />
 
@@ -62,7 +80,7 @@
     var fsClient = filestack.init('An8EGKOh9TGGuI8Vymqonz');
     function openPicker() {
         fsClient.pick({
-            fromSources:["local_file_system","imagesearch","facebook","instagram","dropbox"],
+            fromSources:["local_file_system", "url","imagesearch","facebook","instagram","dropbox"],
             accept:["image/*"],
             maxFiles:1
         }).then(function(response) {

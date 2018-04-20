@@ -24,7 +24,11 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * " + "FROM posts " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "ORDER BY post_id;");
+            stmt = connection.prepareStatement
+                    (
+                            "SELECT posts.id, posts.user_id, posts.title, posts.description,\n" + "       category_name,\n" + "       date_format(`created_on`, '%D %M, %Y') AS created_on,\n" + "       media.location, users.username\n" + "   FROM posts\n" + "   JOIN users\n" + "     ON posts.user_id = users.id\n" + "   JOIN pivot_categories pc\n" + "     ON posts.id = pc.posts_id\n" + "   JOIN categories c\n" + "     ON pc.categories_id = c.id\n" + "   JOIN pivot_media\n" + "     ON posts.id = pivot_media.post_id\n" + "   JOIN media\n" + "     ON pivot_media.media_id = media.id\n" + "  ORDER BY post_id;\n" + "\n"
+
+                    );
 
             ResultSet rs = stmt.executeQuery();
             return createAdsForMain(rs);
@@ -33,21 +37,21 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    private Ad extractAd(ResultSet rs) throws SQLException {
-        return new Ad(rs.getLong("id"), rs.getLong("user_id"), rs.getString("title"), rs.getString("description"), rs.getString("category"), rs.getString("created_on"), rs.getString("location"));
-    }
+//    private Ad extractAd(ResultSet rs) throws SQLException {
+//        return new Ad(rs.getLong("id"), rs.getLong("user_id"), rs.getString("title"), rs.getString("description"), rs.getString("category"), rs.getString("created_on"), rs.getString("location"));
+//    }
 
     private Ad extractAdsforMain(ResultSet rs) throws SQLException {
-        return new Ad(rs.getLong("id"), rs.getLong("user_id"), rs.getString("title"), rs.getString("description"), rs.getString("category_name"), rs.getString("created_on"), rs.getString("location"));
+        return new Ad(rs.getLong("id"), rs.getLong("user_id"), rs.getString("title"), rs.getString("description"), rs.getString("category_name"), rs.getString("created_on"), rs.getString("location"), rs.getString("username"));
     }
 
-    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
-        List<Ad> ads = new ArrayList<>();
-        while (rs.next()) {
-            ads.add(extractAd(rs));
-        }
-        return ads;
-    }
+//    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
+//        List<Ad> ads = new ArrayList<>();
+//        while (rs.next()) {
+//            ads.add(extractAd(rs));
+//        }
+//        return ads;
+//    }
 
     @Override
     public Long insert(Ad ad) {
@@ -154,7 +158,12 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> individualAd(String adID) {
         PreparedStatement pst = null;
         try {
-            pst = connection.prepareStatement("" + "SELECT * " + "FROM posts " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "WHERE posts.id=?");
+            pst = connection.prepareStatement
+                    (
+//                            "" + "SELECT * " + "FROM posts " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id "
+//                                    + "WHERE posts.id=?"
+                            "SELECT posts.id, posts.user_id, posts.title, posts.description,\n" + "       category_name,\n" + "       date_format(`created_on`, '%D %M, %Y') AS created_on,\n" + "       media.location, users.username\n" + "   FROM posts\n" + "   JOIN users\n" + "     ON posts.user_id = users.id\n" + "   JOIN pivot_categories pc\n" + "     ON posts.id = pc.posts_id\n" + "   JOIN categories c\n" + "     ON pc.categories_id = c.id\n" + "   JOIN pivot_media\n" + "     ON posts.id = pivot_media.post_id\n" + "   JOIN media\n" + "     ON pivot_media.media_id = media.id\n" + "  where post_id = ?;"
+                    );
 
             pst.setString(1, adID);
             ResultSet rs = pst.executeQuery();
@@ -212,10 +221,11 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> searchPosts(String searchInput) {
         PreparedStatement pst = null;
         try {
-            pst = connection.prepareStatement("" + "SELECT * " + "FROM posts " + "JOIN users " + "ON posts.user_id = users.id " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "WHERE posts.title " + "LIKE  ?  " + " or c.category_name = ?");
+            pst = connection.prepareStatement("" + "SELECT * " + "FROM posts " + "JOIN users " + "ON posts.user_id = users.id " + "JOIN pivot_categories pc " + "ON posts.id = pc.posts_id " + "JOIN categories c " + "ON pc.categories_id = c.id " + "JOIN pivot_media " + "ON posts.id = pivot_media.post_id " + "JOIN media " + "ON pivot_media.media_id = media.id " + "WHERE posts.title " + "LIKE  ?  " + " or c.category_name like ? or posts.description like ?");
 
             pst.setString(1, "%" + searchInput + "%");
             pst.setString(2, "%" + searchInput + "%");
+            pst.setString(3, "%" + searchInput + "%");
             ResultSet rs = pst.executeQuery();
             return createAdsForMain(rs);
         } catch (SQLException e) {
