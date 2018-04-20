@@ -1,0 +1,72 @@
+2018-04-20T14:25:35.299195+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:35.308174+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:35.308246+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:35.308297+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:35.308354+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:35.308406+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:35.309330+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:35.318545+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:25:35.770446+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:35.772804+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:35.772878+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:35.772931+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:35.772981+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:35.773030+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:35.773913+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:35.778263+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:25:36.364947+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:36.367192+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:36.367350+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:36.367431+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:36.367491+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:36.367562+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:36.368587+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:36.374439+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:25:37.184069+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:37.186221+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:37.186285+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:37.186336+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:37.186383+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:37.186430+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:37.187513+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:37.191677+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:25:38.350289+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:38.352767+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:38.352844+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:38.352899+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:38.352949+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:38.353002+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:38.354282+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:38.359462+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:25:40.357442+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:40.359053+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:40.359148+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:40.359204+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:40.359273+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:40.359347+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:40.360155+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:40.364421+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:25:43.937125+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:43.940915+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:43.940998+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:43.941055+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:43.941115+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:43.941171+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:43.942135+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:43.948050+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:25:50.750370+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:25:50.752870+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:25:50.753025+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:25:50.753215+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:25:50.753358+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:25:50.753492+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:25:50.754976+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:25:50.759455+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar
+2018-04-20T14:26:03.988451+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T14:26:03.990639+00:00 ACCS[web.1]: total 51540
+2018-04-20T14:26:03.990717+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T14:26:03.990771+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T14:26:03.990822+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 52769611 Apr 20 09:23 bmwstore-1.0-SNAPSHOT-jar-with-dependencies.jar
+2018-04-20T14:26:03.990875+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      120 Apr 20 14:25 .
+2018-04-20T14:26:03.992098+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T14:26:03.996471+00:00 APP[web.1]: Error: Unable to access jarfile ibeemer-jar-with-dependencies.jar

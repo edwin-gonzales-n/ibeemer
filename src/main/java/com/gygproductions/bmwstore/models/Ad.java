@@ -47,16 +47,6 @@ public class Ad {
         this.location = location;
     }
 
-//    public Ad(long userId, String title, String description, String created_on, String category,String location, String username) {
-//        this.userId = userId;
-//        this.title = title;
-//        this.description = description;
-//        this.created_on = created_on;
-//        this.category = category;
-//        this.location = location;
-//        this.username = username;
-//    }
-
     public String getUsername() {
         return username;
     }

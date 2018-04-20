@@ -1,0 +1,28 @@
+2018-04-20T06:31:25.480281+00:00 ACCS[web.2]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T06:31:25.488882+00:00 ACCS[web.2]: total 51520
+2018-04-20T06:31:25.488951+00:00 ACCS[web.2]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:02 ..
+2018-04-20T06:31:25.488999+00:00 ACCS[web.2]: -rw-r--r-- 1 apaas apaas      161 Apr 19 22:38 manifest.json
+2018-04-20T06:31:25.489045+00:00 ACCS[web.2]: -rw-r--r-- 1 apaas apaas 52750642 Apr 20 01:26 ibeemer-jar-with-dependencies.jar
+2018-04-20T06:31:25.489089+00:00 ACCS[web.2]: drwxr-xr-x 1 apaas apaas       92 Apr 20 06:31 .
+2018-04-20T06:31:25.490621+00:00 ACCS[web.2]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T06:31:26.994930+00:00 APP[web.2]: Apr 20, 2018 6:31:26 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T06:31:27.015543+00:00 APP[web.2]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T06:31:28.323747+00:00 APP[web.2]: Apr 20, 2018 6:31:28 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T06:31:28.323986+00:00 APP[web.2]: INFO: Initializing ProtocolHandler ["http-bio-8080"]
+2018-04-20T06:31:28.384849+00:00 APP[web.2]: Apr 20, 2018 6:31:28 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T06:31:28.391471+00:00 APP[web.2]: INFO: Starting service Tomcat
+2018-04-20T06:31:28.391835+00:00 APP[web.2]: Apr 20, 2018 6:31:28 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T06:31:28.392160+00:00 APP[web.2]: INFO: Starting Servlet Engine: Apache Tomcat/7.0.82
+2018-04-20T06:31:28.552487+00:00 APP[web.2]: WARNING: An illegal reflective access operation has occurred
+2018-04-20T06:31:28.552770+00:00 APP[web.2]: WARNING: Illegal reflective access by org.apache.catalina.loader.WebappClassLoaderBase$1 (file:/u01/app/ibeemer-jar-with-dependencies.jar) to method java.lang.ClassLoader.registerAsParallelCapable()
+2018-04-20T06:31:28.552974+00:00 APP[web.2]: WARNING: Please consider reporting this to the maintainers of org.apache.catalina.loader.WebappClassLoaderBase$1
+2018-04-20T06:31:28.553172+00:00 APP[web.2]: WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+2018-04-20T06:31:28.553413+00:00 APP[web.2]: WARNING: All illegal access operations will be denied in a future release
+2018-04-20T06:31:28.563492+00:00 APP[web.2]: Apr 20, 2018 6:31:28 AM org.apache.catalina.loader.WebappLoader buildClassPath
+2018-04-20T06:31:28.563667+00:00 APP[web.2]: INFO: Unknown loader jdk.internal.loader.ClassLoaders$AppClassLoader@1b9e1916 class jdk.internal.loader.ClassLoaders$AppClassLoader
+2018-04-20T06:31:28.567895+00:00 APP[web.2]: Apr 20, 2018 6:31:28 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T06:31:28.568063+00:00 APP[web.2]: INFO: No global web.xml found
+2018-04-20T06:31:28.952805+00:00 APP[web.2]: Apr 20, 2018 6:31:28 AM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+2018-04-20T06:31:28.953188+00:00 APP[web.2]: WARNING: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [206] milliseconds.
+2018-04-20T06:31:28.988565+00:00 APP[web.2]: Apr 20, 2018 6:31:28 AM org.apache.coyote.AbstractProtocol start
+2018-04-20T06:31:28.988756+00:00 APP[web.2]: INFO: Starting ProtocolHandler ["http-bio-8080"]

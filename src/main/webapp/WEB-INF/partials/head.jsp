@@ -4,6 +4,9 @@
 
 <%--Fonts go here--%>
 <%--<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">--%>
+
+<link rel="shortcut icon" type="image/x-icon" href="/resources/img/favicon.ico" />
+
 <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 <link rel="stylesheet" href="/resources/css/main.css">
 <link rel="stylesheet" href="/resources/css/fadein.css">

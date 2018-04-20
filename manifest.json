@@ -1,0 +1,7 @@
+{
+  "runtime": {
+    "majorVersion": "8"
+  },
+  "command": "java -jar bmwstore-jar-with-dependencies.jar",
+  "notes": "ibeemer Application with Tomcat embedded"
+}

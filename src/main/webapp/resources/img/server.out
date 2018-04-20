@@ -1,0 +1,890 @@
+2018-04-20T08:34:28.523200+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:28.532110+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:28.532182+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:28.532228+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:28.532273+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:28.532318+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       92 Apr 20 08:34 .
+2018-04-20T08:34:28.533958+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:29.466168+00:00 APP[web.1]: Apr 20, 2018 8:34:29 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:29.466365+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:29.766825+00:00 APP[web.1]: Apr 20, 2018 8:34:29 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:29.767027+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:29.782189+00:00 APP[web.1]: Apr 20, 2018 8:34:29 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:29.782349+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:29.789695+00:00 APP[web.1]: Apr 20, 2018 8:34:29 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:29.789861+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:29.790755+00:00 APP[web.1]: Apr 20, 2018 8:34:29 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:29.790916+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:29.926813+00:00 APP[web.1]: Apr 20, 2018 8:34:29 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:29.927029+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:34:30.529939+00:00 APP[web.1]: Apr 20, 2018 8:34:30 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:30.530145+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:30.530305+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:30.530449+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:30.530617+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:30.530763+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:30.530916+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:30.531057+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.531241+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:30.531387+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:30.531549+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:30.531698+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:30.531865+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:30.532034+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:30.532176+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:30.532321+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:30.532461+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:30.532627+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:34:30.532777+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:30.534593+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:34:30.534788+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.534935+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:30.535075+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:34:30.535214+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:30.535360+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:34:30.535547+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.535694+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:34:30.535838+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:34:30.535993+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:34:30.536139+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.536284+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:34:30.536439+00:00 APP[web.1]: 
+2018-04-20T08:34:30.536610+00:00 APP[web.1]: Apr 20, 2018 8:34:30 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:30.536758+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:30.536903+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:30.537052+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:30.537197+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:30.537343+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:30.537500+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:30.537668+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.537816+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:30.537961+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.538111+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:30.538256+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.538414+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:30.538582+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:30.538730+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:30.538876+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:30.539019+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:30.539168+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:30.539316+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:30.539470+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:30.539632+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:30.539780+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:30.539932+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:30.540079+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:30.540223+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:30.540384+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.540549+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:30.540695+00:00 APP[web.1]: 
+2018-04-20T08:34:30.540841+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:34:30.540986+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:30.541130+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:30.541277+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:30.541433+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:34:30.541643+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:30.541789+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:30.541933+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.542075+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:34:30.542218+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:34:30.542375+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:30.542519+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:30.542682+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.542825+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:34:30.542968+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:30.543111+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:30.543262+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:30.543415+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:30.543575+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:31.333868+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:31.335618+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:31.335789+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:31.335947+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:31.336015+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:31.336067+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:34:31.336110+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:34:31.336838+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:32.018100+00:00 APP[web.1]: Apr 20, 2018 8:34:32 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:32.018298+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:32.333794+00:00 APP[web.1]: Apr 20, 2018 8:34:32 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:32.333979+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:32.355697+00:00 APP[web.1]: Apr 20, 2018 8:34:32 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:32.355864+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:32.360689+00:00 APP[web.1]: Apr 20, 2018 8:34:32 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:32.360851+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:32.364690+00:00 APP[web.1]: Apr 20, 2018 8:34:32 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:32.364848+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:32.479768+00:00 APP[web.1]: Apr 20, 2018 8:34:32 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:32.479948+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:34:33.047619+00:00 APP[web.1]: Apr 20, 2018 8:34:33 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:33.047841+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:33.047988+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:33.048127+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:33.048309+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:33.048466+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:33.048845+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:33.048994+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.049145+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:33.049340+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:33.049545+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:33.049700+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:33.049850+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:33.050004+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:33.050154+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:33.050320+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:33.050513+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:33.050682+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:34:33.050832+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:33.050982+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:34:33.051130+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.051279+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:33.051448+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:34:33.051640+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:33.051794+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:34:33.051945+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.052095+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:34:33.052245+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:34:33.052406+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:34:33.052603+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.052771+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:34:33.052922+00:00 APP[web.1]: 
+2018-04-20T08:34:33.053072+00:00 APP[web.1]: Apr 20, 2018 8:34:33 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:33.053223+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:33.053381+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:33.053579+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:33.053768+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:33.053928+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:33.054078+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:33.054231+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.054389+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:33.054556+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.054706+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:33.054873+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.055026+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:33.055205+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:33.055367+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:33.055517+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:33.055684+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:33.055841+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:33.056005+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:33.056156+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:33.056313+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:33.056464+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:33.056654+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:33.056808+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:33.056977+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:33.057152+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.057317+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:33.057468+00:00 APP[web.1]: 
+2018-04-20T08:34:33.057634+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:34:33.057786+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:33.057935+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:33.058109+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:33.058274+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:34:33.058449+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:33.058620+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:33.058773+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.058936+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:34:33.059098+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:34:33.059264+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:33.059445+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:33.059620+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.059771+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:34:33.059947+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:33.060114+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:33.060289+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:33.060445+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:33.060622+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:33.948870+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:33.950637+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:33.950722+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:33.950767+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:33.950811+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:33.950853+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:34:33.950898+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:34:33.951648+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:34.567847+00:00 APP[web.1]: Apr 20, 2018 8:34:34 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:34.568044+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:34.872797+00:00 APP[web.1]: Apr 20, 2018 8:34:34 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:34.872985+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:34.892760+00:00 APP[web.1]: Apr 20, 2018 8:34:34 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:34.892938+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:34.897753+00:00 APP[web.1]: Apr 20, 2018 8:34:34 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:34.897915+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:34.905899+00:00 APP[web.1]: Apr 20, 2018 8:34:34 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:34.906076+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:35.018797+00:00 APP[web.1]: Apr 20, 2018 8:34:35 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:35.018989+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:34:35.675034+00:00 APP[web.1]: Apr 20, 2018 8:34:35 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:35.675403+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:35.675757+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:35.676065+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:35.676363+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:35.676708+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:35.677008+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:35.677301+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.677640+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:35.677939+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:35.678232+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:35.678555+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:35.678852+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:35.679141+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:35.679451+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:35.679782+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:35.680079+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:35.680399+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:34:35.680654+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:35.680796+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:34:35.680933+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.681070+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:35.681207+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:34:35.681344+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:35.681483+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:34:35.681637+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.681781+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:34:35.681920+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:34:35.682056+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:34:35.682192+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.682328+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:34:35.682468+00:00 APP[web.1]: 
+2018-04-20T08:34:35.682623+00:00 APP[web.1]: Apr 20, 2018 8:34:35 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:35.682767+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:35.682904+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:35.683043+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:35.683180+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:35.683318+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:35.683460+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:35.684045+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.684202+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:35.684351+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.684491+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:35.684652+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.684791+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:35.684930+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:35.685068+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:35.685203+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:35.685346+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:35.685484+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:35.685643+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:35.685784+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:35.685922+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:35.686059+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:35.686196+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:35.686335+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:35.686473+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:35.686632+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.686772+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:35.686908+00:00 APP[web.1]: 
+2018-04-20T08:34:35.687044+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:34:35.687181+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:35.687320+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:35.687458+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:35.687614+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:34:35.687758+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:35.687895+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:35.688032+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.688167+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:34:35.688308+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:34:35.688446+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:35.688602+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:35.688743+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.688879+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:34:35.689020+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:35.689158+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:35.689299+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:35.689437+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:35.689592+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:36.749185+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:36.750813+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:36.750873+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:36.750917+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:36.750960+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:36.750999+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:34:36.751040+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:34:36.752079+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:37.506883+00:00 APP[web.1]: Apr 20, 2018 8:34:37 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:37.507075+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:37.894806+00:00 APP[web.1]: Apr 20, 2018 8:34:37 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:37.894998+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:37.918697+00:00 APP[web.1]: Apr 20, 2018 8:34:37 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:37.918861+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:37.933927+00:00 APP[web.1]: Apr 20, 2018 8:34:37 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:37.934087+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:37.934236+00:00 APP[web.1]: Apr 20, 2018 8:34:37 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:37.934375+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:38.039806+00:00 APP[web.1]: Apr 20, 2018 8:34:38 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:38.039994+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:34:38.783515+00:00 APP[web.1]: Apr 20, 2018 8:34:38 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:38.783876+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:38.784448+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:38.784938+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:38.785087+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:38.785228+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:38.785368+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:38.785505+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.785666+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:38.785802+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:38.785938+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:38.786072+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:38.786211+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:38.786345+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:38.786479+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:38.786994+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:38.787149+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:38.787290+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:34:38.787427+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:38.787592+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:34:38.787749+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.787892+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:38.788028+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:34:38.788172+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:38.788308+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:34:38.788444+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.788600+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:34:38.788738+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:34:38.788874+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:34:38.789011+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.789145+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:34:38.789278+00:00 APP[web.1]: 
+2018-04-20T08:34:38.789414+00:00 APP[web.1]: Apr 20, 2018 8:34:38 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:38.789569+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:38.789715+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:38.789856+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:38.789991+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:38.790125+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:38.790261+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:38.790396+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.790547+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:38.790686+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.790820+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:38.790958+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.791096+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:38.791231+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:38.791373+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:38.791507+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:38.791662+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:38.791797+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:38.791931+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:38.792066+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:38.792205+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:38.792339+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:38.792475+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:38.793651+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:38.793810+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:38.793950+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.794088+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:38.794225+00:00 APP[web.1]: 
+2018-04-20T08:34:38.794365+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:34:38.794501+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:38.794658+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:38.794794+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:38.794930+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:34:38.795068+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:38.795206+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:38.795349+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.795486+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:34:38.795641+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:34:38.795778+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:38.795914+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:38.796048+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.796181+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:34:38.796318+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:38.796453+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:38.796606+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:38.796743+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:38.796878+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:40.208151+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:40.209674+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:40.209734+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:40.209783+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:40.209825+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:40.209868+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:34:40.209910+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:34:40.210483+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:40.812098+00:00 APP[web.1]: Apr 20, 2018 8:34:40 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:40.812484+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:41.076819+00:00 APP[web.1]: Apr 20, 2018 8:34:41 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:41.077017+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:41.089741+00:00 APP[web.1]: Apr 20, 2018 8:34:41 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:41.089906+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:41.098596+00:00 APP[web.1]: Apr 20, 2018 8:34:41 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:41.098781+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:41.106738+00:00 APP[web.1]: Apr 20, 2018 8:34:41 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:41.106903+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:41.230844+00:00 APP[web.1]: Apr 20, 2018 8:34:41 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:41.231033+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:34:41.802802+00:00 APP[web.1]: Apr 20, 2018 8:34:41 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:41.802991+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:41.803137+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:41.803276+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:41.803425+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:41.803583+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:41.803732+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:41.803880+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.804017+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:41.804152+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:41.804287+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:41.804422+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:41.804583+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:41.804722+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:41.804858+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:41.804996+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:41.805130+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:41.805265+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:34:41.805398+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:41.805552+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:34:41.805690+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.805825+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:41.805960+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:34:41.806100+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:41.806237+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:34:41.806371+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.806506+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:34:41.806662+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:34:41.806798+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:34:41.806934+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.807068+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:34:41.807205+00:00 APP[web.1]: 
+2018-04-20T08:34:41.807357+00:00 APP[web.1]: Apr 20, 2018 8:34:41 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:41.807497+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:41.814469+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:41.814649+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:41.814794+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:41.814931+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:41.815067+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:41.815203+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.815342+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:41.815477+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.815631+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:41.815769+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.815919+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:41.816057+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:41.816193+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:41.816332+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:41.816466+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:41.816629+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:41.816773+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:41.816908+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:41.817042+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:41.817177+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:41.817320+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:41.817453+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:41.829187+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:41.829355+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.829502+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:41.829705+00:00 APP[web.1]: 
+2018-04-20T08:34:41.829849+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:34:41.829986+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:41.830121+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:41.830255+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:41.830390+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:34:41.830538+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:41.830679+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:41.830817+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.830949+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:34:41.831090+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:34:41.831225+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:41.831358+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:41.831492+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.832081+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:34:41.832232+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:41.832374+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:41.832514+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:41.832692+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:41.832834+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:44.100167+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:44.101984+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:44.102129+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:44.102262+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:44.102394+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:44.102542+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:34:44.102674+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:34:44.103873+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:44.718446+00:00 APP[web.1]: Apr 20, 2018 8:34:44 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:44.724140+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:45.059822+00:00 APP[web.1]: Apr 20, 2018 8:34:45 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:45.060035+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:45.082899+00:00 APP[web.1]: Apr 20, 2018 8:34:45 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:45.083063+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:45.087745+00:00 APP[web.1]: Apr 20, 2018 8:34:45 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:45.087906+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:45.091724+00:00 APP[web.1]: Apr 20, 2018 8:34:45 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:45.091888+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:45.266820+00:00 APP[web.1]: Apr 20, 2018 8:34:45 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:45.267042+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:34:45.856835+00:00 APP[web.1]: Apr 20, 2018 8:34:45 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:45.857046+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:45.857210+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:45.857359+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:45.857500+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:45.857665+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:45.857807+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:45.857947+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.858087+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:45.858243+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:45.858384+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:45.858540+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:45.858686+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:45.858825+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:45.858969+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:45.859119+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:45.859263+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:45.859403+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:34:45.859566+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:45.859708+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:34:45.859848+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.859986+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:45.860138+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:34:45.860280+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:45.860417+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:34:45.860578+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.860724+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:34:45.860865+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:34:45.861004+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:34:45.861157+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.861307+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:34:45.861449+00:00 APP[web.1]: 
+2018-04-20T08:34:45.863944+00:00 APP[web.1]: Apr 20, 2018 8:34:45 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:45.864116+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:45.864264+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:45.864408+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:45.864571+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:45.864716+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:45.864855+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:45.865009+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.865151+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:45.865295+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.865437+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:45.865598+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.865740+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:45.865879+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:45.866035+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:45.866177+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:45.866315+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:45.866456+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:45.866616+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:45.866760+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:45.866899+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:45.867054+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:45.867193+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:45.867331+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:45.867469+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:45.868242+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.868407+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:45.868575+00:00 APP[web.1]: 
+2018-04-20T08:34:45.868719+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:34:45.868862+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:45.869016+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:45.869153+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:45.869290+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:34:45.869432+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:45.869592+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:45.869734+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.869887+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:34:45.870029+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:34:45.870168+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:45.870307+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:45.870443+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.870605+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:34:45.870751+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:45.870905+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:45.871045+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:45.871183+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:45.871320+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:49.701343+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:49.703206+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:49.703355+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:49.703480+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:49.703634+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:49.703759+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:34:49.703883+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:34:49.705224+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:50.351093+00:00 APP[web.1]: Apr 20, 2018 8:34:50 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:50.351287+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:50.627812+00:00 APP[web.1]: Apr 20, 2018 8:34:50 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:50.628000+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:50.644753+00:00 APP[web.1]: Apr 20, 2018 8:34:50 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:50.644918+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:50.649705+00:00 APP[web.1]: Apr 20, 2018 8:34:50 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:50.649876+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:50.650019+00:00 APP[web.1]: Apr 20, 2018 8:34:50 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:50.650157+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:50.754192+00:00 APP[web.1]: Apr 20, 2018 8:34:50 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:50.754380+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:34:51.657847+00:00 APP[web.1]: Apr 20, 2018 8:34:51 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:51.658085+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:51.658238+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:51.658389+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:51.658551+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:51.658698+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:51.658840+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:51.658981+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.659121+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:51.659259+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:51.659398+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:51.659565+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:51.659708+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:51.659874+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:51.660021+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:34:51.660160+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:51.660302+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:51.660445+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:34:51.660605+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:51.660748+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:34:51.660941+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.661087+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:51.661231+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:34:51.661371+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:51.661515+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:34:51.661677+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.661843+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:34:51.661983+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:34:51.662123+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:34:51.662268+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.662411+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:34:51.662570+00:00 APP[web.1]: 
+2018-04-20T08:34:51.662716+00:00 APP[web.1]: Apr 20, 2018 8:34:51 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:34:51.662860+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:34:51.663003+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:51.663146+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:34:51.663293+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:34:51.663451+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:34:51.663623+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:51.663765+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.663904+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:51.664091+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.664235+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:51.664383+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.664545+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:51.664691+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:51.664833+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:34:51.664973+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:51.665112+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:34:51.665251+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:34:51.665395+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:34:51.668290+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:34:51.668463+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:34:51.668642+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:34:51.668795+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:51.668944+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:51.669095+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:34:51.669251+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.669413+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:51.669594+00:00 APP[web.1]: 
+2018-04-20T08:34:51.669753+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:34:51.669914+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:51.670147+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:34:51.670345+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:34:51.670508+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:34:51.670699+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:51.670855+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:34:51.671011+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.671168+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:34:51.671321+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:34:51.671474+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:34:51.671642+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:34:51.671798+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.671961+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:34:51.672114+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:34:51.672270+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:34:51.672426+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:34:51.672604+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:34:51.672760+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:34:58.738320+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:34:58.739938+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:34:58.740106+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:34:58.740253+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:34:58.740392+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:34:58.740548+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:34:58.740669+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:34:58.741493+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:34:59.340555+00:00 APP[web.1]: Apr 20, 2018 8:34:59 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:34:59.340776+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:34:59.570836+00:00 APP[web.1]: Apr 20, 2018 8:34:59 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:34:59.571044+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:34:59.584828+00:00 APP[web.1]: Apr 20, 2018 8:34:59 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:34:59.585011+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:34:59.593716+00:00 APP[web.1]: Apr 20, 2018 8:34:59 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:34:59.593881+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:34:59.594027+00:00 APP[web.1]: Apr 20, 2018 8:34:59 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:34:59.594168+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:34:59.723813+00:00 APP[web.1]: Apr 20, 2018 8:34:59 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:34:59.724014+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:35:00.325873+00:00 APP[web.1]: Apr 20, 2018 8:35:00 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:35:00.326089+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:35:00.326255+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:35:00.326408+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:35:00.326584+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:35:00.326747+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:35:00.326911+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:35:00.327059+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.327223+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:35:00.327383+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:35:00.327561+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:35:00.327720+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:35:00.327874+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:35:00.328029+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:35:00.328187+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:35:00.328352+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:00.328507+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:35:00.328682+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:35:00.328828+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:00.328980+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:35:00.329135+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.329292+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:35:00.329438+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:35:00.329623+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:00.329779+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:35:00.329932+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.330085+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:35:00.330252+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:35:00.330408+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:35:00.330586+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.330741+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:35:00.330899+00:00 APP[web.1]: 
+2018-04-20T08:35:00.331052+00:00 APP[web.1]: Apr 20, 2018 8:35:00 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:35:00.331220+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:35:00.331374+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:35:00.331548+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:35:00.331704+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:35:00.331857+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:35:00.332011+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:35:00.332174+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.332331+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:35:00.332480+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.332653+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:35:00.332810+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.332967+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:35:00.333158+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:35:00.333317+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:35:00.333474+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:00.333650+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:35:00.333808+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:35:00.333956+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:35:00.334123+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:35:00.334280+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:35:00.334438+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:35:00.334612+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:35:00.334772+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:35:00.334930+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:35:00.335102+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.335260+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:35:00.335416+00:00 APP[web.1]: 
+2018-04-20T08:35:00.335595+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:35:00.335754+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:00.335913+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:35:00.336081+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:35:00.336240+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:35:00.336396+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:00.336965+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:35:00.337145+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.337294+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:35:00.337441+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:35:00.337609+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:00.337760+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:35:00.337909+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.338070+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:35:00.338240+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:35:00.338389+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:35:00.338551+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:35:00.338700+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:00.338845+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:35:13.810334+00:00 ACCS[web.1]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T08:35:13.814341+00:00 ACCS[web.1]: total 52004
+2018-04-20T08:35:13.814401+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T08:35:13.814447+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T08:35:13.814493+00:00 ACCS[web.1]: -rw-r--r-- 1 apaas apaas 53246834 Apr 20 03:24 ibeemer-jar-with-dependencies.jar
+2018-04-20T08:35:13.814555+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas      114 Apr 20 08:34 .
+2018-04-20T08:35:13.814606+00:00 ACCS[web.1]: drwxr-xr-x 1 apaas apaas        8 Apr 20 08:34 tomcat.8080
+2018-04-20T08:35:13.815507+00:00 ACCS[web.1]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T08:35:14.433913+00:00 APP[web.1]: Apr 20, 2018 8:35:14 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T08:35:14.434124+00:00 APP[web.1]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T08:35:14.746896+00:00 APP[web.1]: Apr 20, 2018 8:35:14 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T08:35:14.747063+00:00 APP[web.1]: INFO: Initializing ProtocolHandler ["http-nio-8080"]
+2018-04-20T08:35:14.773912+00:00 APP[web.1]: Apr 20, 2018 8:35:14 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2018-04-20T08:35:14.774076+00:00 APP[web.1]: INFO: Using a shared selector for servlet write/read
+2018-04-20T08:35:14.786688+00:00 APP[web.1]: Apr 20, 2018 8:35:14 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T08:35:14.786852+00:00 APP[web.1]: INFO: Starting service [Tomcat]
+2018-04-20T08:35:14.786997+00:00 APP[web.1]: Apr 20, 2018 8:35:14 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T08:35:14.787143+00:00 APP[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/8.5.30
+2018-04-20T08:35:14.889471+00:00 APP[web.1]: Apr 20, 2018 8:35:14 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T08:35:14.889697+00:00 APP[web.1]: INFO: No global web.xml found
+2018-04-20T08:35:15.462538+00:00 APP[web.1]: Apr 20, 2018 8:35:15 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:35:15.462729+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:35:15.462876+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:35:15.463023+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:35:15.464339+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:35:15.464517+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:35:15.464693+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:35:15.464836+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.464975+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:35:15.465113+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:35:15.465251+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:35:15.465388+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:35:15.465546+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:35:15.465687+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:35:15.465825+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]
+2018-04-20T08:35:15.465961+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:15.466097+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:35:15.466234+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [Pipeline[StandardEngine[Tomcat].StandardHost[localhost].StandardContext[]]]
+2018-04-20T08:35:15.466371+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:15.466507+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5150)
+2018-04-20T08:35:15.466667+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.466817+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:35:15.466965+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.authenticator.NonLoginAuthenticator[]]
+2018-04-20T08:35:15.467103+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:15.467249+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardPipeline.startInternal(StandardPipeline.java:182)
+2018-04-20T08:35:15.467389+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.467538+00:00 APP[web.1]: #011... 8 more
+2018-04-20T08:35:15.467681+00:00 APP[web.1]: Caused by: java.lang.NoSuchMethodError: javax.servlet.ServletContext.getVirtualServerName()Ljava/lang/String;
+2018-04-20T08:35:15.467819+00:00 APP[web.1]: #011at org.apache.catalina.authenticator.AuthenticatorBase.startInternal(AuthenticatorBase.java:1186)
+2018-04-20T08:35:15.467958+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.468093+00:00 APP[web.1]: #011... 10 more
+2018-04-20T08:35:15.468229+00:00 APP[web.1]: 
+2018-04-20T08:35:15.468365+00:00 APP[web.1]: Apr 20, 2018 8:35:15 AM org.apache.catalina.core.ContainerBase startInternal
+2018-04-20T08:35:15.468501+00:00 APP[web.1]: SEVERE: A child container failed during start
+2018-04-20T08:35:15.469337+00:00 APP[web.1]: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:35:15.469541+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+2018-04-20T08:35:15.469714+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+2018-04-20T08:35:15.469876+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:941)
+2018-04-20T08:35:15.470030+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:35:15.470186+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.470337+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:35:15.470490+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.470658+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:35:15.470811+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.470962+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:35:15.471112+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:35:15.471270+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost]]
+2018-04-20T08:35:15.471421+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:15.471594+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1421)
+2018-04-20T08:35:15.471747+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1411)
+2018-04-20T08:35:15.471898+00:00 APP[web.1]: #011at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2018-04-20T08:35:15.472048+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+2018-04-20T08:35:15.472202+00:00 APP[web.1]: #011at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+2018-04-20T08:35:15.472353+00:00 APP[web.1]: #011at java.lang.Thread.run(Thread.java:748)
+2018-04-20T08:35:15.472630+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:35:15.472785+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:35:15.472937+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:872)
+2018-04-20T08:35:15.473123+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.473278+00:00 APP[web.1]: #011... 6 more
+2018-04-20T08:35:15.473430+00:00 APP[web.1]: 
+2018-04-20T08:35:15.473602+00:00 APP[web.1]: Exception in thread "main" org.apache.catalina.LifecycleException: Failed to start component [StandardServer[-1]]
+2018-04-20T08:35:15.473759+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:15.473912+00:00 APP[web.1]: #011at org.apache.catalina.startup.Tomcat.start(Tomcat.java:367)
+2018-04-20T08:35:15.474074+00:00 APP[web.1]: #011at com.gygproductions.bmwstore.Main.main(Main.java:20)
+2018-04-20T08:35:15.474225+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardService[Tomcat]]
+2018-04-20T08:35:15.474378+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:15.474543+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+2018-04-20T08:35:15.474697+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.474848+00:00 APP[web.1]: #011... 2 more
+2018-04-20T08:35:15.474998+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat]]
+2018-04-20T08:35:15.475151+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+2018-04-20T08:35:15.475301+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+2018-04-20T08:35:15.475491+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.475704+00:00 APP[web.1]: #011... 4 more
+2018-04-20T08:35:15.475885+00:00 APP[web.1]: Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+2018-04-20T08:35:15.476042+00:00 APP[web.1]: #011at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:949)
+2018-04-20T08:35:15.476198+00:00 APP[web.1]: #011at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+2018-04-20T08:35:15.476349+00:00 APP[web.1]: #011at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2018-04-20T08:35:15.476499+00:00 APP[web.1]: #011... 6 more

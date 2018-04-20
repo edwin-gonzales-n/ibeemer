@@ -1,0 +1,19 @@
+2018-04-20T09:03:32.058770+00:00 ACCS[web.2]: "Content of APP_HOME [ /u01/app ] dir "
+2018-04-20T09:03:32.067712+00:00 ACCS[web.2]: total 51536
+2018-04-20T09:03:32.067860+00:00 ACCS[web.2]: drwxr-xr-x 1 apaas apaas       78 Feb 22 06:11 ..
+2018-04-20T09:03:32.067992+00:00 ACCS[web.2]: -rw-r--r-- 1 apaas apaas      199 Apr 20 03:19 manifest.json
+2018-04-20T09:03:32.068134+00:00 ACCS[web.2]: -rw-r--r-- 1 apaas apaas 52767852 Apr 20 03:59 ibeemer-jar-with-dependencies.jar
+2018-04-20T09:03:32.068291+00:00 ACCS[web.2]: drwxr-xr-x 1 apaas apaas       92 Apr 20 09:03 .
+2018-04-20T09:03:32.069685+00:00 ACCS[web.2]: Starting application with launch command [ java -jar ibeemer-jar-with-dependencies.jar ]
+2018-04-20T09:03:32.957886+00:00 APP[web.2]: Apr 20, 2018 9:03:32 AM org.apache.catalina.core.StandardContext setPath
+2018-04-20T09:03:32.958085+00:00 APP[web.2]: WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+2018-04-20T09:03:33.321458+00:00 APP[web.2]: Apr 20, 2018 9:03:33 AM org.apache.coyote.AbstractProtocol init
+2018-04-20T09:03:33.321647+00:00 APP[web.2]: INFO: Initializing ProtocolHandler ["http-bio-8080"]
+2018-04-20T09:03:33.321788+00:00 APP[web.2]: Apr 20, 2018 9:03:33 AM org.apache.catalina.core.StandardService startInternal
+2018-04-20T09:03:33.321926+00:00 APP[web.2]: INFO: Starting service Tomcat
+2018-04-20T09:03:33.322067+00:00 APP[web.2]: Apr 20, 2018 9:03:33 AM org.apache.catalina.core.StandardEngine startInternal
+2018-04-20T09:03:33.322233+00:00 APP[web.2]: INFO: Starting Servlet Engine: Apache Tomcat/7.0.82
+2018-04-20T09:03:33.446377+00:00 APP[web.2]: Apr 20, 2018 9:03:33 AM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2018-04-20T09:03:33.446550+00:00 APP[web.2]: INFO: No global web.xml found
+2018-04-20T09:03:34.484430+00:00 APP[web.2]: Apr 20, 2018 9:03:34 AM org.apache.coyote.AbstractProtocol start
+2018-04-20T09:03:34.484634+00:00 APP[web.2]: INFO: Starting ProtocolHandler ["http-bio-8080"]

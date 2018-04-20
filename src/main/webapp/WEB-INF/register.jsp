@@ -62,6 +62,7 @@
                         <div class="control-group">
                             <!-- Button -->
                             <div class="controls">
+                                <p class="help-block">Please sign in after registering!</p>
                                 <button class="btn btn-primary">Register</button>
                             </div>
                         </div>

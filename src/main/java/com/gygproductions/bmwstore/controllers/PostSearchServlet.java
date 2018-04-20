@@ -24,7 +24,7 @@ public class PostSearchServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         if(session.isNew()){
-            request.setAttribute("navbar", "/WEB-INF/partials/navbar_logout.jsp");
+            request.setAttribute("navbar", "/WEB-INF/partials/navbar.jsp");
         } else {
             request.setAttribute("navbar", "/WEB-INF/partials/navbar.jsp");
         }

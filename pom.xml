@@ -3,11 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.gygproductions</groupId>
-    <artifactId>bmw-store</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.gygproductions.bmwstore</groupId>
+    <artifactId>bmwstore</artifactId>
     <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+
     <properties>
         <tomcat.version>7.0.82</tomcat.version>
     </properties>
@@ -24,14 +24,14 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.3.2</version>
-                    <inherited>true</inherited>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                        <encoding>UTF-8</encoding>
-                    </configuration>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
             </plugin>
 
             <plugin>
@@ -44,6 +44,7 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
+
                         <configuration>
                             <descriptorRefs>
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -55,6 +56,7 @@
                             </archive>
                         </configuration>
                     </execution>
+
                     <execution>
                         <id>dist</id>
                         <phase>package</phase>
@@ -69,9 +71,8 @@
                     </execution>
                 </executions>
             </plugin>
-            </plugins>
-        </build>
-
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
@@ -142,5 +143,5 @@
         </dependency>
     </dependencies>
 
-    
+
 </project>

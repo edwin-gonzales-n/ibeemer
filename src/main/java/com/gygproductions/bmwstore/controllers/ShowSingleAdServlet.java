@@ -18,8 +18,6 @@ public class ShowSingleAdServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
         String Ad = request.getParameter("ad-id");
         List<Ad> singleAd = DaoFactory.getAdsDao().individualAd(Ad);
         request.setAttribute("single", singleAd);
